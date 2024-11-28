@@ -1,5 +1,3 @@
-Here’s a straightforward README.md for your project repository:
-
 Dashcam Route Overlay with Pix2Pix
 
 This project explores training a Pix2Pix model to generate route overlays on dashcam images. The goal is to develop a proof-of-concept (PoC) model that can take a raw dashcam image as input and output the same image with a superimposed route.
