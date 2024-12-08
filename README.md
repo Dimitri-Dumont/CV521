@@ -1,5 +1,3 @@
-Here’s a straightforward README.md for your project repository:
-
 Dashcam Route Overlay with Pix2Pix
 
 This project explores training a Pix2Pix model to generate route overlays on dashcam images. The goal is to develop a proof-of-concept (PoC) model that can take a raw dashcam image as input and output the same image with a superimposed route.
@@ -31,15 +29,10 @@ Project Files
 
 	•	poc_p2p.ipynb: The core notebook for training the Pix2Pix model.
 	•	dataset/: Directory containing input and output image pairs for training.
-	•	comma_utils/: Utility scripts borrowed from the comma2k19 repository for dataset augmentation and preparation.
+	•	utils/: Utility scripts borrowed from the comma2k19 repository for dataset augmentation and preparation.
 	•	models/: Definitions for the generator and discriminator architectures.
-	•	logs/: TensorBoard logs for visualizing training progress.
 
-Usage
-
-
-
-Install the dependencies:
+Usage:
 
 
 Training
@@ -56,10 +49,12 @@ Use the trained model to generate overlays for new dashcam images:
 
 Results
 
-	•	Example outputs will be added in future updates.
+![image](https://github.com/user-attachments/assets/10515a48-e69e-45f1-9879-a952a64083c9)
 
 Acknowledgments
 
 	•	Comma2k19 Dataset: For the base dataset and utility files.
+		https://github.com/commaai/comma2k19
 	•	Pix2Pix Paper: For the underlying architecture and methodology.
+		https://www.tensorflow.org/tutorials/generative/pix2pix
 
