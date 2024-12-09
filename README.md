@@ -4,8 +4,8 @@ This project explores training a Pix2Pix model to generate route overlays on das
 
 Dataset
 
-	•	Source: The dataset is based on the comma2k19 dataset.
-	•	Augmented Dataset: Dashcam images from the comma2k19 dataset were augmented to include a route overlay as output.
+	•	Source: The dataset is derived from the comma2k19 dataset.
+	•	Augmented Dataset: Initial dashcam footage frames are stored as input and a corresponding output was generated using comma2k19 repository utility functions.
 	•	Structure:
 
 dataset/
@@ -22,32 +22,29 @@ Methodology
 	•	Generator: A U-Net-based generator to translate input images to output overlays.
 	•	Discriminator: A PatchGAN discriminator to differentiate real vs. generated overlays.
 	3.	Training:
-	•	Training is implemented in the notebook poc_p2p.ipynb.
+	•	Training is implemented in the notebook training_metrics.ipynb.
 	•	The model learns to map input dashcam images to their corresponding output images with a route overlay.
 
 Project Files
 
-	•	poc_p2p.ipynb: The core notebook for training the Pix2Pix model.
+	•	training_metrics.ipynb: The core notebook for training the Pix2Pix model.
 	•	dataset/: Directory containing input and output image pairs for training.
 	•	utils/: Utility scripts borrowed from the comma2k19 repository for dataset augmentation and preparation.
 	•	models/: Definitions for the generator and discriminator architectures.
 
-Usage:
-
-
-Training
 
 To train the model, run the notebook:
-	1.	Open poc_p2p.ipynb.
-	2.	Execute the cells to preprocess the data and train the model.
+	1.	unzip the dataset.zip file
+	2.	Open training_metrics.ipynb.
+	3.	Execute the cells to preprocess the data and train the model.
+	* Note this notebook was intended for use in Google Colab, but should work with minor adjustments for local execution.
 
-Inference
+Logs:
+	1. Metrics per epoch will be generated measuring Generator and discriminator loss along with an FID score.
+	2. Std out will be saved as a text file and optionally stored in a mounted Google drive instance if running in Colab.  
 
-Use the trained model to generate overlays for new dashcam images:
-	1.	Preprocess the input image using the same steps as in training.
-	2.	Pass the image through the trained generator to produce the overlay.
-
-Results
+Use the trained model to generate overlays for new dashcam video:
+	1.	There exists optional code blocks to process and create an output video overlaid with route prediction. Video's can be user generated or sourced from the original comma2k19 dataset.
 
 ![image](https://github.com/user-attachments/assets/10515a48-e69e-45f1-9879-a952a64083c9)
 
