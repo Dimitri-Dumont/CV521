@@ -46,7 +46,7 @@ Logs:
 Use the trained model to generate overlays for new dashcam video:
 	1.	There exists optional code blocks to process and create an output video overlaid with route prediction. Video's can be user generated or sourced from the original comma2k19 dataset.
 
-![image](https://github.com/user-attachments/assets/10515a48-e69e-45f1-9879-a952a64083c9)
+![image](https://github.com/user-attachments/assets/b651ef62-de19-4c3d-9647-cbc7721907cf)
 
 Acknowledgments
 
